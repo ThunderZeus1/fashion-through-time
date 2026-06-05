@@ -307,6 +307,7 @@ $(document).ready(function () {
     // ---- 13) CONTACT FORM VALIDATION + THANKS MODAL ----
     $('#contactForm').on('submit', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         var allGood = true;
         $('.form-group').removeClass('has-error');
 
@@ -323,7 +324,54 @@ $(document).ready(function () {
         if (!allGood) return false;
 
         var form = $(this);
-        $.post(form.attr('action'), form.serialize()).always(showThanksModal);
+        // When developing with Live Server (port 5500) it can't run PHP.
+        // If Live Server is active, forward AJAX to the local PHP dev server.
+        var actionUrl = form.attr('action');
+        if (window.location.port === '5500') {
+            actionUrl = 'http://127.0.0.1:8000/php/send-mail.php';
+        }
+        // If hosted on Netlify (static), post to the page path so Netlify Forms can capture it
+        if (window.location.hostname.indexOf('netlify.app') !== -1) {
+            actionUrl = window.location.pathname;
+        }
+
+        var $submit = form.find('button[type=submit]');
+        $submit.prop('disabled', true).addClass('is-loading');
+
+        $.ajax({
+            url: actionUrl,
+            method: 'POST',
+            data: form.serialize(),
+            dataType: 'json',
+            success: function (resp) {
+                if (resp && resp.success) {
+                    showThanksModal();
+                } else if (resp && resp.errors) {
+                    var txt = resp.errors.join(', ');
+                    if (txt.toLowerCase().indexOf('name') !== -1) $('#nameGroup').addClass('has-error');
+                    if (txt.toLowerCase().indexOf('email') !== -1) $('#emailGroup').addClass('has-error');
+                    if (txt.toLowerCase().indexOf('message') !== -1) $('#messageGroup').addClass('has-error');
+                    alert('Please fix: ' + txt);
+                } else if (resp && resp.message) {
+                    alert(resp.message);
+                } else {
+                    alert('Unexpected server response.');
+                }
+            },
+            error: function (xhr) {
+                var msg = 'Server error. Please try again later.';
+                try {
+                    var json = JSON.parse(xhr.responseText || '{}');
+                    if (json && json.message) msg = json.message;
+                } catch (e) {}
+                alert(msg);
+            },
+            complete: function () {
+                $submit.prop('disabled', false).removeClass('is-loading');
+            }
+        });
+
+        return false;
     });
 
     function showThanksModal() {
