@@ -330,10 +330,6 @@ $(document).ready(function () {
         if (window.location.port === '5500') {
             actionUrl = 'http://127.0.0.1:8000/php/send-mail.php';
         }
-        // If hosted on Netlify (static), post to the page path so Netlify Forms can capture it
-        if (window.location.hostname.indexOf('netlify.app') !== -1) {
-            actionUrl = window.location.pathname;
-        }
 
         var $submit = form.find('button[type=submit]');
         var isNetlify = form.data('netlify') || (window.location.hostname.indexOf('netlify.app') !== -1);
