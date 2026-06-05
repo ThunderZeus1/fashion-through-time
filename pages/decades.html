@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore fashion decade by decade - from 1950s New Look to today's sustainable runways.">
+    <title>Decades | Fashion Through Time</title>
+
+    <!-- Self-hosted fonts -->
+    <link rel="stylesheet" href="../css/fonts.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <link rel="icon" type="image/svg+xml" href="../images/logo.jpeg">
+</head>
+<body>
+
+    <!-- Page loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-monogram" aria-hidden="true">F</div>
+        <span class="loader-label">Fashion Through Time</span>
+        <span class="loader-sublabel">Chapter II · Decades</span>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+    <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon" aria-hidden="true"></span>
+                <span>FTT</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="decades.html" class="active">Decades</a></li>
+                <li><a href="artists.html">Designers &amp; Icons</a></li>
+                <li><a href="technology.html">Craft &amp; Innovation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <header class="page-header has-backdrop" style="--header-bg:url('../images/photos/dior-couture.jpg')">
+        <video class="header-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+            <source src="../images/videos/runway-walk.mp4" type="video/mp4">
+        </video>
+        <div class="page-header-inner">
+            <span class="page-eyebrow">Chapter II</span>
+            <h1 class="neon-text">Decades of Style</h1>
+            <p>Travel through seventy years of fashion history. Each decade tells its own story - through its silhouettes, its icons, and the spirit of its time.</p>
+        </div>
+    </header>
+
+    <!-- ===== INTERACTIVE TIMELINE ===== -->
+    <section id="timeline-section">
+        <!-- Floating side jump-nav - visible on desktop only -->
+        <aside class="decade-jump" aria-label="Jump to decade">
+            <span class="jump-rule" aria-hidden="true"></span>
+            <ul>
+                <li><a href="#dec-50s" data-decade="50s">50s</a></li>
+                <li><a href="#dec-60s" data-decade="60s">60s</a></li>
+                <li><a href="#dec-70s" data-decade="70s">70s</a></li>
+                <li><a href="#dec-80s" data-decade="80s">80s</a></li>
+                <li><a href="#dec-90s" data-decade="90s">90s</a></li>
+                <li><a href="#dec-00s" data-decade="00s">00s</a></li>
+                <li><a href="#dec-10s" data-decade="10s">10s</a></li>
+                <li><a href="#dec-20s" data-decade="20s">20s</a></li>
+            </ul>
+        </aside>
+
+        <div class="container">
+            <h2 class="section-title neon-text reveal">Interactive <em>Timeline</em></h2>
+            <p class="section-subtitle reveal">Scroll from post-war elegance into today's runway.</p>
+
+            <div class="timeline" id="timeline">
+
+                <!-- 1950s -->
+                <div class="timeline-item" id="dec-50s">
+                    <div class="timeline-card">
+                        <img class="decade-image" src="../images/photos/fashion-1950s.jpg" alt="1950s fashion - poodle skirt" loading="lazy">
+                        <span class="decade-label">1950s</span>
+                        <h3>The New Look</h3>
+                        <p>Dior's 1947 New Look set the tone - femininity, cinched waists, full skirts, and gloves. A return to luxury after years of war-time austerity.</p>
+                        <ul>
+                            <li><strong>Silhouette:</strong> Hourglass, full skirts, cinched waists</li>
+                            <li><strong>Designers:</strong> Christian Dior, Coco Chanel, Balenciaga</li>
+                            <li><strong>Icons:</strong> Audrey Hepburn, Grace Kelly, Marilyn Monroe</li>
+                            <li><strong>Defining Piece:</strong> The Dior Bar Suit</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 1960s -->
+                <div class="timeline-item" id="dec-60s">
+                    <div class="timeline-card">
+                        <img class="decade-image" src="../images/photos/fashion-1960s.jpg" alt="Carnaby Street 1966" loading="lazy">
+                        <span class="decade-label">1960s</span>
+                        <h3>The Youthquake</h3>
+                        <p>Mary Quant invented the mini skirt. Twiggy became the face of the era. The Mod movement on Carnaby Street rewrote the rules of youth fashion.</p>
+                        <ul>
+                            <li><strong>Silhouette:</strong> Mini skirts, A-line shifts, mod suits</li>
+                            <li><strong>Designers:</strong> Mary Quant, André Courrèges, Yves Saint Laurent</li>
+                            <li><strong>Icons:</strong> Twiggy, Jackie Kennedy, Brigitte Bardot</li>
+                            <li><strong>Defining Piece:</strong> The Mary Quant mini skirt</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 1970s -->
+                <div class="timeline-item" id="dec-70s">
+                    <div class="timeline-card">
+                        <img class="decade-image" src="../images/photos/fashion-1970s.jpg" alt="1970s fashion" loading="lazy">
+                        <span class="decade-label">1970s</span>
+                        <h3>Bohemia &amp; Disco</h3>
+                        <p>The decade of freedom. Bell-bottoms and prairie dresses by day, sequins and Halston jersey by night at Studio 54.</p>
+                        <ul>
+                            <li><strong>Silhouette:</strong> Bell-bottoms, jumpsuits, maxi dresses</li>
+                            <li><strong>Designers:</strong> Halston, Yves Saint Laurent, Diane von Furstenberg</li>
+                            <li><strong>Icons:</strong> Bianca Jagger, Cher, Jerry Hall</li>
+                            <li><strong>Defining Piece:</strong> YSL Le Smoking tuxedo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 1980s -->
+                <div class="timeline-item" id="dec-80s">
+                    <div class="timeline-card">
+                        <img class="decade-image" src="../images/photos/fashion-1980s.jpg" alt="1980s power dressing" loading="lazy">
+                        <span class="decade-label">1980s</span>
+                        <h3>Power &amp; Excess</h3>
+                        <p>Shoulder pads invaded the boardroom. Pop stars wore Versace and Armani. Bigger was better - louder colour, taller hair, bolder logos.</p>
+                        <ul>
+                            <li><strong>Silhouette:</strong> Shoulder pads, power suits, leggings</li>
+                            <li><strong>Designers:</strong> Giorgio Armani, Donna Karan, Gianni Versace</li>
+                            <li><strong>Icons:</strong> Madonna, Princess Diana, Joan Collins</li>
+                            <li><strong>Defining Piece:</strong> The Armani power suit</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 1990s -->
+                <div class="timeline-item" id="dec-90s">
+                    <div class="timeline-card">
+                        <img class="decade-image" src="../images/photos/slip-dress-plaza.jpg" alt="Model wearing a 1990s Calvin Klein slip dress" loading="lazy">
+                        <span class="decade-label">1990s</span>
+                        <h3>Minimalism &amp; Grunge</h3>
+                        <p>Two extremes ruled side by side: stark minimalism (Helmut Lang, Calvin Klein) and grunge (flannel, ripped jeans). And the rise of the supermodel.</p>
+                        <ul>
+                            <li><strong>Silhouette:</strong> Slip dresses, slip skirts, oversized denim</li>
+                            <li><strong>Designers:</strong> Calvin Klein, Helmut Lang, Alexander McQueen</li>
+                            <li><strong>Icons:</strong> Kate Moss, Naomi Campbell, Cindy Crawford</li>
+                            <li><strong>Defining Piece:</strong> The Calvin Klein slip dress</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2000s -->
+                <div class="timeline-item" id="dec-00s">
+                    <div class="timeline-card">
+                        <img class="decade-image" src="../images/photos/fashion-2000s.jpg" alt="2000s runway show" loading="lazy">
+                        <span class="decade-label">2000s</span>
+                        <h3>Y2K &amp; Logomania</h3>
+                        <p>Low-rise jeans, velour tracksuits, and It-bags. The decade that confused everyone, and that Gen Z would obsessively revive twenty years later.</p>
+                        <ul>
+                            <li><strong>Silhouette:</strong> Low-rise jeans, micro-skirts, layered tanks</li>
+                            <li><strong>Designers:</strong> Tom Ford for Gucci, Marc Jacobs, Stella McCartney</li>
+                            <li><strong>Icons:</strong> Paris Hilton, Sarah Jessica Parker, Beyoncé</li>
+                            <li><strong>Defining Piece:</strong> The Juicy Couture tracksuit</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2010s -->
+                <div class="timeline-item" id="dec-10s">
+                    <div class="timeline-card">
+                        <img class="decade-image" src="../images/photos/fashion-2010s.jpg" alt="2010s street fashion" loading="lazy">
+                        <span class="decade-label">2010s</span>
+                        <h3>Streetwear &amp; Athleisure</h3>
+                        <p>Hoodies became couture. Off-White, Supreme, and Yeezy redefined luxury. Instagram turned every street corner into a runway.</p>
+                        <ul>
+                            <li><strong>Silhouette:</strong> Skinny jeans → athleisure, normcore, oversized</li>
+                            <li><strong>Designers:</strong> Virgil Abloh, Phoebe Philo, Riccardo Tisci</li>
+                            <li><strong>Icons:</strong> Rihanna, Kim Kardashian, Zendaya</li>
+                            <li><strong>Defining Piece:</strong> Yeezy sneakers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2020s -->
+                <div class="timeline-item" id="dec-20s">
+                    <div class="timeline-card">
+                        <img class="decade-image" src="../images/photos/fashion-2020s.png" alt="2020s contemporary fashion" loading="lazy">
+                        <span class="decade-label">2020s</span>
+                        <h3>Sustainability &amp; Revival</h3>
+                        <p>Vintage and resale boomed. Genderless and size-inclusive collections moved to the centre. Y2K came back. So did corsets.</p>
+                        <ul>
+                            <li><strong>Silhouette:</strong> Low-rise revival, oversized blazers, slip skirts</li>
+                            <li><strong>Designers:</strong> Daniel Roseberry, Pierpaolo Piccioli, Harris Reed</li>
+                            <li><strong>Icons:</strong> Bella Hadid, Harry Styles, Zendaya</li>
+                            <li><strong>Defining Piece:</strong> The Bottega pouch</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FLIP CARDS - QUICK GLANCE ===== -->
+    <section id="quick-glance">
+        <div class="container">
+            <h2 class="section-title neon-text reveal">Quick Glance - Tap a Card</h2>
+            <p class="section-subtitle reveal">Tap (or click) to reveal each decade's defining look.</p>
+
+            <div class="flip-cards-grid">
+                <div class="flip-card reveal" data-decade="50s">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            50s
+                            <small>NEW LOOK</small>
+                            <span class="audio-hint">TAP TO REVEAL</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-bg" style="background-image:url('../images/photos/dior-couture.jpg')"></div>
+                            <span class="back-eyebrow">1947 · Christian Dior</span>
+                            <h4>The Bar Suit</h4>
+                            <p>Christian Dior, 1947. Cream silk jacket over a black wool skirt - the silhouette that relaunched Paris.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card reveal" data-decade="60s">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            60s
+                            <small>YOUTHQUAKE</small>
+                            <span class="audio-hint">TAP TO REVEAL</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-bg" style="background-image:url('../images/photos/twiggy.jpg')"></div>
+                            <span class="back-eyebrow">1964 · Mary Quant</span>
+                            <h4>The Mini Skirt</h4>
+                            <p>Mary Quant, 1964. Six inches above the knee - a piece of fabric that defined a generation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card reveal" data-decade="70s">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            70s
+                            <small>DISCO ERA</small>
+                            <span class="audio-hint">TAP TO REVEAL</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-bg back-bg--le-smoking" style="background-image:url('../images/photos/yves-saint-laurent-woman-tux.jpg')"></div>
+                            <span class="back-eyebrow">1966 · Yves Saint Laurent</span>
+                            <h4>Le Smoking</h4>
+                            <p>Yves Saint Laurent, 1966. The tuxedo for women. Sharp, sensual, scandalous - and timeless.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card reveal" data-decade="80s">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            80s
+                            <small>POWER</small>
+                            <span class="audio-hint">TAP TO REVEAL</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-bg back-bg--power-suit" style="background-image:url('../images/photos/fashion-1980s.jpg')"></div>
+                            <span class="back-eyebrow">1980 · Giorgio Armani</span>
+                            <h4>The Power Suit</h4>
+                            <p>Giorgio Armani, 1980. Soft tailoring, broad shoulders. Boardroom armour for a new generation of women.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card reveal" data-decade="90s">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            90s
+                            <small>MINIMAL</small>
+                            <span class="audio-hint">TAP TO REVEAL</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-bg back-bg--slip-dress" style="background-image:url('../images/photos/slip-dress-plaza.jpg')"></div>
+                            <span class="back-eyebrow">1994 · Calvin Klein</span>
+                            <h4>The Slip Dress</h4>
+                            <p>Calvin Klein, 1994. Bias-cut satin. The lingerie that quietly became evening wear.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card reveal" data-decade="00s">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            00s
+                            <small>LOGOMANIA</small>
+                            <span class="audio-hint">TAP TO REVEAL</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-bg" style="background-image:url('../images/photos/fashion-2000s.jpg')"></div>
+                            <span class="back-eyebrow">2001 · Juicy Couture</span>
+                            <h4>The Tracksuit</h4>
+                            <p>Juicy Couture, 2001. Pastel velour, rhinestone letters. Loungewear becomes status.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card reveal" data-decade="10s">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            10s
+                            <small>STREET</small>
+                            <span class="audio-hint">TAP TO REVEAL</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-bg" style="background-image:url('../images/photos/fashion-2010s.jpg')"></div>
+                            <span class="back-eyebrow">2015 · Kanye West x Adidas</span>
+                            <h4>The Yeezy Sneaker</h4>
+                            <p>Kanye West &amp; Adidas, 2015. A streetwear shoe that taught luxury houses how to queue.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card reveal" data-decade="20s">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            20s
+                            <small>REVIVAL</small>
+                            <span class="audio-hint">TAP TO REVEAL</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-bg" style="background-image:url('../images/photos/fashion-2020s.png')"></div>
+                            <span class="back-eyebrow">2020 · Bottega Veneta</span>
+                            <h4>The Bottega Pouch</h4>
+                            <p>Daniel Lee for Bottega Veneta, 2020. Soft, intrecciato, no logo. Quiet luxury, defined.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section reveal">
+        <h2>Meet the Designers</h2>
+        <p>Each decade has its makers. Explore the styles and the names that defined them.</p>
+        <a href="artists.html" class="btn btn-primary">Discover Designers &amp; Icons</a>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon" aria-hidden="true"></span>
+                    <span>Fashion Through Time</span>
+                </div>
+                <p>An interactive digital fashion museum celebrating the evolution of style, designers, and craftsmanship from the 1950s to today.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="decades.html">Decades</a></li>
+                    <li><a href="artists.html">Designers</a></li>
+                    <li><a href="technology.html">Craft</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Form</a></li>
+                    <li><a href="mailto:ftt@gmail.com">Email Us</a></li>
+                    <li><a href="contact.html#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4 1 .5.4.8.8 1 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-1 1.4-.4.5-.8.8-1.4 1-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-1-.5-.4-.8-.8-1-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 1-1.4.4-.5.8-.8 1.4-1 .4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 1.8a3.2 3.2 0 1 1 0 6.4 3.2 3.2 0 0 1 0-6.4zm5.2-2.1a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
+                    <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-4.4 23.2c-.1-1-.2-2.4 0-3.5l1.5-6.3s-.4-.8-.4-1.9c0-1.8 1-3.1 2.3-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1.1 4.2-.3 1.3.6 2.3 1.9 2.3 2.3 0 4-2.4 4-5.9 0-3.1-2.2-5.3-5.4-5.3-3.7 0-5.8 2.8-5.8 5.6 0 1.1.4 2.3.9 2.9.1.1.1.2.1.3l-.4 1.4c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.8 2.7-7.2 7.9-7.2 4.1 0 7.4 3 7.4 6.9 0 4.1-2.6 7.5-6.2 7.5-1.2 0-2.4-.6-2.7-1.4l-.7 2.8c-.3 1-.9 2.3-1.4 3.1A12 12 0 1 0 12 0z"/></svg></a>
+                    <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fashion Through Time. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back-to-top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7 1.4 1.4L11 8.8V19h2V8.8l4.6 4.6L19 12z"/></svg>
+    </button>
+
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

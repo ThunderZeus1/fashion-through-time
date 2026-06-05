@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the legendary designers and explore the categories of fashion - from haute couture to streetwear.">
+    <title>Designers &amp; Icons | Fashion Through Time</title>
+
+    <!-- Self-hosted fonts -->
+    <link rel="stylesheet" href="../css/fonts.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/svg+xml" href="../images/logo.jpeg">
+</head>
+<body>
+
+    <!-- Page loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-monogram" aria-hidden="true">F</div>
+        <span class="loader-label">Fashion Through Time</span>
+        <span class="loader-sublabel">Chapter III · Designers</span>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+    <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon" aria-hidden="true"></span>
+                <span>FTT</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="decades.html">Decades</a></li>
+                <li><a href="artists.html" class="active">Designers &amp; Icons</a></li>
+                <li><a href="technology.html">Craft &amp; Innovation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <header class="page-header has-backdrop" style="--header-bg:url('../images/photos/coco-chanel.jpg')">
+        <video class="header-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+            <source src="../images/videos/model-portrait.mp4" type="video/mp4">
+        </video>
+        <div class="page-header-inner">
+            <span class="page-eyebrow">Chapter III</span>
+            <h1 class="neon-text">Designers &amp; Icons</h1>
+            <p>Meet the makers. Discover the categories. From haute couture ateliers to streetwear drops - fashion's heroes await.</p>
+        </div>
+    </header>
+
+    <!-- ===== CATEGORY TABS ===== -->
+    <section id="genres">
+        <div class="container">
+            <h2 class="section-title neon-text reveal">Explore the Categories</h2>
+            <p class="section-subtitle reveal">Click a category to read about its origin, defining traits, and key names.</p>
+
+            <div class="genre-tabs reveal">
+                <button class="genre-pill active" data-genre="couture">Haute Couture</button>
+                <button class="genre-pill" data-genre="readytowear">Ready-to-Wear</button>
+                <button class="genre-pill" data-genre="streetwear">Streetwear</button>
+                <button class="genre-pill" data-genre="avantgarde">Avant-Garde</button>
+                <button class="genre-pill" data-genre="minimalist">Minimalist</button>
+                <button class="genre-pill" data-genre="sustainable">Sustainable</button>
+            </div>
+
+            <!-- Category Details -->
+            <div class="genre-detail active" data-genre="couture">
+                <div class="genre-icon-large">
+                    <img src="../images/photos/haute-couture.jpg" alt="Chanel haute couture 1965" loading="lazy">
+                </div>
+                <div class="genre-info">
+                    <h3>Haute Couture</h3>
+                    <p>The pinnacle of fashion. Hand-sewn in Parisian ateliers, made-to-measure for individual clients, and legally protected by the Chambre Syndicale. Each piece can take hundreds of hours to construct.</p>
+                    <p class="mt-1"><strong>Era of dominance:</strong> 1858–Present</p>
+                    <p><strong>Key Houses:</strong> Chanel, Dior, Valentino, Schiaparelli, Givenchy</p>
+                </div>
+            </div>
+
+            <div class="genre-detail" data-genre="readytowear">
+                <div class="genre-icon-large">
+                    <img src="../images/photos/dior-couture.jpg" alt="Dior ready-to-wear" loading="lazy">
+                </div>
+                <div class="genre-info">
+                    <h3>Ready-to-Wear</h3>
+                    <p>Standard-sized clothing produced in advance - the engine of the modern industry. YSL democratised it with Rive Gauche in 1966; today it accounts for the majority of every luxury house's revenue.</p>
+                    <p class="mt-1"><strong>Era of dominance:</strong> 1960s–Present</p>
+                    <p><strong>Key Designers:</strong> Yves Saint Laurent, Calvin Klein, Phoebe Philo</p>
+                </div>
+            </div>
+
+            <div class="genre-detail" data-genre="streetwear">
+                <div class="genre-icon-large">
+                    <img src="../images/photos/fashion-2010s.jpg" alt="Streetwear" loading="lazy">
+                </div>
+                <div class="genre-info">
+                    <h3>Streetwear</h3>
+                    <p>From California skateparks and New York hip-hop to global luxury. Supreme, Off-White, and Yeezy taught the runway to queue. The hoodie became couture.</p>
+                    <p class="mt-1"><strong>Era of dominance:</strong> 1990s–Present</p>
+                    <p><strong>Key Designers:</strong> Virgil Abloh, James Jebbia, Shawn Stussy, Kim Jones</p>
+                </div>
+            </div>
+
+            <div class="genre-detail" data-genre="avantgarde">
+                <div class="genre-icon-large">
+                    <img src="../images/photos/alexander-mcqueen.jpg" alt="Alexander McQueen avant-garde" loading="lazy">
+                </div>
+                <div class="genre-info">
+                    <h3>Avant-Garde</h3>
+                    <p>Clothing as art. The Japanese movement of the 80s (Comme des Garçons, Yohji Yamamoto) and McQueen's theatrical runways turned the catwalk into a stage for ideas - beauty, decay, identity, protest.</p>
+                    <p class="mt-1"><strong>Era of dominance:</strong> 1980s–Present</p>
+                    <p><strong>Key Designers:</strong> Alexander McQueen, Rei Kawakubo, Martin Margiela</p>
+                </div>
+            </div>
+
+            <div class="genre-detail" data-genre="minimalist">
+                <div class="genre-icon-large">
+                    <img src="../images/photos/fashion-1990s.jpg" alt="Minimalist fashion" loading="lazy">
+                </div>
+                <div class="genre-info">
+                    <h3>Minimalist</h3>
+                    <p>"Less is more." Clean lines, neutral palettes, perfect fit. Born in 90s Antwerp and Calvin Klein's New York, revived by Phoebe Philo at Céline, and the foundation of today's "quiet luxury".</p>
+                    <p class="mt-1"><strong>Era of dominance:</strong> 1990s–Present</p>
+                    <p><strong>Key Designers:</strong> Calvin Klein, Helmut Lang, Phoebe Philo, Jil Sander</p>
+                </div>
+            </div>
+
+            <div class="genre-detail" data-genre="sustainable">
+                <div class="genre-icon-large">
+                    <img src="../images/photos/fashion-2020s.png" alt="Sustainable fashion" loading="lazy">
+                </div>
+                <div class="genre-info">
+                    <h3>Sustainable</h3>
+                    <p>Fashion's most urgent conversation. From Stella McCartney's two-decade leather-free run to deadstock-only brands and the resale boom - the defining ethics question of the 2020s wardrobe.</p>
+                    <p class="mt-1"><strong>Era of dominance:</strong> 2010s–Present</p>
+                    <p><strong>Key Designers:</strong> Stella McCartney, Gabriela Hearst, Marine Serre</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== LEGENDARY DESIGNERS ===== -->
+    <section id="artists">
+        <div class="container">
+            <h2 class="section-title neon-text reveal">Legendary <em>Designers</em></h2>
+            <p class="section-subtitle reveal">Filter by category to find your favourite legends.</p>
+
+            <!-- Filter buttons -->
+            <div class="filter-bar reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Couture">Couture</button>
+                <button class="filter-btn" data-filter="Ready-to-Wear">Ready-to-Wear</button>
+                <button class="filter-btn" data-filter="Streetwear">Streetwear</button>
+                <button class="filter-btn" data-filter="Avant-Garde">Avant-Garde</button>
+                <button class="filter-btn" data-filter="Icon">Icon</button>
+            </div>
+
+            <!-- Designer cards -->
+            <div class="artists-large-grid" id="artistGrid">
+                <div class="artist-large-card reveal" data-name="Coco Chanel" data-genre="Couture">
+                    <div class="artist-avatar">
+                        <img src="../images/photos/coco-chanel.jpg" alt="Coco Chanel portrait" loading="lazy">
+                    </div>
+                    <h3>Coco Chanel</h3>
+                    <span class="genre-tag">Couture</span>
+                    <p>Liberated women from the corset. Invented the little black dress, costume jewellery, and the No. 5.</p>
+                </div>
+
+                <div class="artist-large-card reveal" data-name="Christian Dior" data-genre="Couture">
+                    <div class="artist-avatar">
+                        <img src="../images/photos/christian-dior.jpg" alt="Christian Dior portrait" loading="lazy">
+                    </div>
+                    <h3>Christian Dior</h3>
+                    <span class="genre-tag">Couture</span>
+                    <p>Restored Paris to the top of fashion with 1947's New Look - and built the house that still leads couture today.</p>
+                </div>
+
+                <div class="artist-large-card reveal" data-name="Yves Saint Laurent" data-genre="Ready-to-Wear">
+                    <div class="artist-avatar">
+                        <img src="../images/photos/yves-saint-laurent.jpg" alt="Yves Saint Laurent portrait" loading="lazy">
+                    </div>
+                    <h3>Yves Saint Laurent</h3>
+                    <span class="genre-tag">Ready-to-Wear</span>
+                    <p>Le Smoking, the safari jacket, ready-to-wear at Rive Gauche. Made the modern wardrobe.</p>
+                </div>
+
+                <div class="artist-large-card reveal" data-name="Audrey Hepburn" data-genre="Icon">
+                    <div class="artist-avatar">
+                        <img src="../images/photos/audrey-hepburn.jpg" alt="Audrey Hepburn portrait" loading="lazy">
+                    </div>
+                    <h3>Audrey Hepburn</h3>
+                    <span class="genre-tag">Icon</span>
+                    <p>Givenchy's muse. The black dress in Breakfast at Tiffany's defined elegance for an entire century.</p>
+                </div>
+
+                <div class="artist-large-card reveal" data-name="Twiggy" data-genre="Icon">
+                    <div class="artist-avatar">
+                        <img src="../images/photos/twiggy.jpg" alt="Twiggy portrait" loading="lazy">
+                    </div>
+                    <h3>Twiggy</h3>
+                    <span class="genre-tag">Icon</span>
+                    <p>The face of the 60s Youthquake. Made the mini skirt and Mary Quant household names.</p>
+                </div>
+
+                <div class="artist-large-card reveal" data-name="Karl Lagerfeld" data-genre="Couture">
+                    <div class="artist-avatar">
+                        <img src="../images/photos/karl-lagerfeld.jpg" alt="Karl Lagerfeld portrait" loading="lazy">
+                    </div>
+                    <h3>Karl Lagerfeld</h3>
+                    <span class="genre-tag">Couture</span>
+                    <p>Revived Chanel, ran Fendi for half a century, and made the white ponytail a global brand.</p>
+                </div>
+
+                <div class="artist-large-card reveal" data-name="Vivienne Westwood" data-genre="Streetwear">
+                    <div class="artist-avatar">
+                        <img src="../images/photos/vivienne-westwood.jpg" alt="Vivienne Westwood portrait" loading="lazy">
+                    </div>
+                    <h3>Vivienne Westwood</h3>
+                    <span class="genre-tag">Streetwear</span>
+                    <p>Mother of punk. Took torn t-shirts to the streets and helped build the attitude behind modern streetwear.</p>
+                </div>
+
+                <div class="artist-large-card reveal" data-name="Alexander McQueen" data-genre="Avant-Garde">
+                    <div class="artist-avatar">
+                        <img src="../images/photos/alexander-mcqueen.jpg" alt="Alexander McQueen portrait" loading="lazy">
+                    </div>
+                    <h3>Alexander McQueen</h3>
+                    <span class="genre-tag">Avant-Garde</span>
+                    <p>Tailor of genius and the most theatrical mind in fashion. Every show was a story.</p>
+                </div>
+
+                <div class="artist-large-card reveal" data-name="Tom Ford" data-genre="Ready-to-Wear">
+                    <div class="artist-avatar">
+                        <img src="../images/photos/tom-ford.jpg" alt="Tom Ford portrait" loading="lazy">
+                    </div>
+                    <h3>Tom Ford</h3>
+                    <span class="genre-tag">Ready-to-Wear</span>
+                    <p>Saved Gucci in the 90s, revived YSL, then built his own house. The high priest of glossy luxury.</p>
+                </div>
+
+                <div class="artist-large-card reveal" data-name="Donatella Versace" data-genre="Ready-to-Wear">
+                    <div class="artist-avatar">
+                        <img src="../images/photos/donatella-versace.jpg" alt="Donatella Versace portrait" loading="lazy">
+                    </div>
+                    <h3>Donatella Versace</h3>
+                    <span class="genre-tag">Ready-to-Wear</span>
+                    <p>Kept her brother's legacy alive - bold, golden, unmistakeably Versace. Queen of the supermodel runway.</p>
+                </div>
+
+                <div class="artist-large-card reveal" data-name="Naomi Campbell" data-genre="Icon">
+                    <div class="artist-avatar">
+                        <img src="../images/photos/naomi-campbell.jpg" alt="Naomi Campbell portrait" loading="lazy">
+                    </div>
+                    <h3>Naomi Campbell</h3>
+                    <span class="genre-tag">Icon</span>
+                    <p>One of the original supermodels. Walked the runway for every major house - and still does.</p>
+                </div>
+
+                <div class="artist-large-card reveal" data-name="Anna Wintour" data-genre="Icon">
+                    <div class="artist-avatar">
+                        <img src="../images/photos/anna-wintour.jpg" alt="Anna Wintour portrait" loading="lazy">
+                    </div>
+                    <h3>Anna Wintour</h3>
+                    <span class="genre-tag">Icon</span>
+                    <p>Editor-in-chief of Vogue since 1988. The bob, the sunglasses, the front row - the most powerful figure in fashion.</p>
+                </div>
+            </div>
+
+            <!-- No results message -->
+            <p id="noResults" class="text-center mt-3" style="display:none; color: var(--color-gold);">
+                No designers found. Try a different filter.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section reveal">
+        <h2>How Is It Made?</h2>
+        <p>Discover the craft and the technology - from the sewing machine to the contemporary atelier.</p>
+        <a href="technology.html" class="btn btn-primary">Explore the Craft</a>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon" aria-hidden="true"></span>
+                    <span>Fashion Through Time</span>
+                </div>
+                <p>An interactive digital fashion museum celebrating the evolution of style, designers, and craftsmanship from the 1950s to today.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="decades.html">Decades</a></li>
+                    <li><a href="artists.html">Designers</a></li>
+                    <li><a href="technology.html">Craft</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Form</a></li>
+                    <li><a href="mailto:ftt@gmail.com">Email Us</a></li>
+                    <li><a href="contact.html#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4 1 .5.4.8.8 1 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-1 1.4-.4.5-.8.8-1.4 1-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-1-.5-.4-.8-.8-1-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 1-1.4.4-.5.8-.8 1.4-1 .4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 1.8a3.2 3.2 0 1 1 0 6.4 3.2 3.2 0 0 1 0-6.4zm5.2-2.1a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
+                    <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-4.4 23.2c-.1-1-.2-2.4 0-3.5l1.5-6.3s-.4-.8-.4-1.9c0-1.8 1-3.1 2.3-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1.1 4.2-.3 1.3.6 2.3 1.9 2.3 2.3 0 4-2.4 4-5.9 0-3.1-2.2-5.3-5.4-5.3-3.7 0-5.8 2.8-5.8 5.6 0 1.1.4 2.3.9 2.9.1.1.1.2.1.3l-.4 1.4c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.8 2.7-7.2 7.9-7.2 4.1 0 7.4 3 7.4 6.9 0 4.1-2.6 7.5-6.2 7.5-1.2 0-2.4-.6-2.7-1.4l-.7 2.8c-.3 1-.9 2.3-1.4 3.1A12 12 0 1 0 12 0z"/></svg></a>
+                    <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fashion Through Time. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Designer lightbox - opens when you tap a designer card -->
+    <div class="designer-lightbox" id="designerLightbox" aria-hidden="true">
+        <div class="lb-backdrop"></div>
+        <div class="lb-panel" role="dialog" aria-modal="true">
+            <div class="lb-image" aria-hidden="true"></div>
+            <div class="lb-content">
+                <button class="lb-close" type="button" aria-label="Close">&times;</button>
+                <span class="lb-genre">Genre</span>
+                <h3 class="lb-name">Designer name</h3>
+                <p class="lb-bio">Biography text.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back-to-top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7 1.4 1.4L11 8.8V19h2V8.8l4.6 4.6L19 12z"/></svg>
+    </button>
+
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

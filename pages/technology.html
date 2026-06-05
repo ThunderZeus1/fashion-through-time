@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover how fashion is made - from the sewing machine to the modern atelier and sustainable fabric tech.">
+    <title>Craft &amp; Innovation | Fashion Through Time</title>
+
+    <!-- Self-hosted fonts -->
+    <link rel="stylesheet" href="../css/fonts.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/svg+xml" href="../images/logo.jpeg">
+</head>
+<body>
+
+    <!-- Page loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-monogram" aria-hidden="true">F</div>
+        <span class="loader-label">Fashion Through Time</span>
+        <span class="loader-sublabel">Chapter IV · Craft</span>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+    <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon" aria-hidden="true"></span>
+                <span>FTT</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="decades.html">Decades</a></li>
+                <li><a href="artists.html">Designers &amp; Icons</a></li>
+                <li><a href="technology.html" class="active">Craft &amp; Innovation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <header class="page-header has-backdrop" style="--header-bg:url('../images/photos/sewing-machines-vintage.jpg')">
+        <video class="header-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+            <source src="../images/videos/atelier-craft.mp4" type="video/mp4">
+        </video>
+        <div class="page-header-inner">
+            <span class="page-eyebrow">Chapter IV</span>
+            <h1 class="neon-text">Craft &amp; Innovation</h1>
+            <p>From the hand-stitched couture atelier to algorithmic supply chains and lab-grown leather - how clothing has been made, and the shifts that changed everything.</p>
+        </div>
+    </header>
+
+    <!-- ===== CRAFT TIMELINE ===== -->
+    <section id="tech-timeline">
+        <div class="container">
+            <h2 class="section-title neon-text reveal">A Timeline of <em>Craft</em></h2>
+            <p class="section-subtitle reveal">Five inventions that reshaped how the world dresses.</p>
+
+            <div class="tech-timeline">
+                <div class="tech-card reveal">
+                    <div class="tech-icon">
+                        <img src="../images/photos/sewing-machines-vintage.jpg" alt="Sewing machines" loading="lazy">
+                    </div>
+                    <span class="year-tag">1846 - Today</span>
+                    <h3>Sewing Machine</h3>
+                    <p>Elias Howe's patent. The single invention that took clothing from artisan craft to industrial production.</p>
+                </div>
+
+                <div class="tech-card reveal">
+                    <div class="tech-icon">
+                        <img src="../images/photos/dress-form.jpg" alt="Dress form" loading="lazy">
+                    </div>
+                    <span class="year-tag">1858 - Present</span>
+                    <h3>The Couture Atelier</h3>
+                    <p>Charles Frederick Worth opens the first Parisian house. The atelier model - designer, premier d'atelier, petites mains - still defines couture.</p>
+                </div>
+
+                <div class="tech-card reveal">
+                    <div class="tech-icon">
+                        <img src="../images/photos/haute-couture.jpg" alt="Haute couture" loading="lazy">
+                    </div>
+                    <span class="year-tag">1939 - Today</span>
+                    <h3>Synthetic Fibres</h3>
+                    <p>DuPont's nylon. Then polyester, lycra, spandex. The materials that made affordable mass-produced clothing possible.</p>
+                </div>
+
+                <div class="tech-card reveal">
+                    <div class="tech-icon">
+                        <img src="../images/photos/runway-show.jpg" alt="Runway show" loading="lazy">
+                    </div>
+                    <span class="year-tag">1990 - Today</span>
+                    <h3>The Global Runway</h3>
+                    <p>Fashion Week becomes televised, then live-streamed. Paris, Milan, New York, London - a single annual calendar drives a global industry.</p>
+                </div>
+
+                <div class="tech-card reveal">
+                    <div class="tech-icon">
+                        <img src="../images/photos/fashion-2020s.png" alt="Sustainable fashion" loading="lazy">
+                    </div>
+                    <span class="year-tag">2015 - Today</span>
+                    <h3>Sustainable Tech</h3>
+                    <p>Lab-grown leather, recycled polyester, on-demand production. The shift from "newer, cheaper, faster" to "fewer, better, slower".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STYLE OF EVERY ERA - YouTube embed ===== -->
+    <section id="player-section">
+        <div class="container">
+            <h2 class="section-title neon-text reveal">The Style of Every Era</h2>
+            <p class="section-subtitle reveal">Watch a century of fashion in a few short minutes - every decade, every defining silhouette.</p>
+
+            <div class="mashup-embed reveal">
+                <video controls muted loop playsinline preload="metadata"
+                       poster="../images/photos/runway-poster.jpg">
+                    <source src="../images/videos/style-montage.mp4" type="video/mp4">
+                    Sorry, your browser doesn't support embedded video.
+                </video>
+            </div>
+
+            <p class="reveal text-center mt-2" style="font-size: 0.85rem; color: var(--color-muted);">
+                A short runway moment - self-hosted, royalty-free footage.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== THEN vs NOW ===== -->
+    <section id="compare">
+        <div class="container">
+            <h2 class="section-title neon-text reveal">Then vs. Now</h2>
+            <p class="section-subtitle reveal">How making and wearing clothes has changed in a single generation.</p>
+
+            <div class="compare-grid">
+                <div class="compare-card then reveal">
+                    <h3>Then (1950s - 1990s)</h3>
+                    <ul>
+                        <li>Two collections per year - Spring/Summer and Autumn/Winter</li>
+                        <li>Garments tailored to last decades, often passed down</li>
+                        <li>Visit a tailor, or buy from a department store</li>
+                        <li>Magazines tell you what to wear; collections drop slowly</li>
+                        <li>Most pieces sewn at a sewing machine in a domestic factory</li>
+                    </ul>
+                </div>
+
+                <div class="compare-card now reveal">
+                    <h3>Now (2010s - Today)</h3>
+                    <ul>
+                        <li>Up to 52 micro-drops a year from fast-fashion retailers</li>
+                        <li>Average garment worn 7 times before being discarded</li>
+                        <li>Shop on your phone; clothes arrive in 24 hours</li>
+                        <li>Instagram and TikTok set trends in real time</li>
+                        <li>Production scattered globally; supply chains span 12+ countries</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ICONIC GARMENTS GALLERY ===== -->
+    <section id="device-gallery">
+        <div class="container">
+            <h2 class="section-title neon-text reveal">Iconic Garments</h2>
+            <p class="section-subtitle reveal">Six pieces that changed how the world dressed.</p>
+
+            <div class="device-gallery">
+                <div class="device-card reveal">
+                    <div class="device-image-wrap">
+                        <img src="../images/photos/dior-couture.jpg" alt="Dior couture suit" loading="lazy">
+                    </div>
+                    <div class="device-body">
+                        <span class="device-year">1947</span>
+                        <h3>The Bar Suit</h3>
+                        <span class="device-maker">Christian Dior · The New Look</span>
+                        <p>The cream silk jacket and pleated black skirt that relaunched Paris couture and defined post-war femininity.</p>
+                    </div>
+                </div>
+
+                <div class="device-card reveal">
+                    <div class="device-image-wrap">
+                        <img src="../images/photos/little-black-dress.jpg" alt="Little black dress garment" loading="lazy">
+                    </div>
+                    <div class="device-body">
+                        <span class="device-year">1961</span>
+                        <h3>The Little Black Dress</h3>
+                        <span class="device-maker">Givenchy · Breakfast at Tiffany's</span>
+                        <p>Hubert de Givenchy's design on Audrey Hepburn - the silhouette that made the LBD a non-negotiable wardrobe staple.</p>
+                    </div>
+                </div>
+
+                <div class="device-card reveal">
+                    <div class="device-image-wrap">
+                        <img src="../images/photos/yves-saint-laurent-woman-tux.jpg" alt="Yves Saint Laurent Le Smoking women's tuxedo" loading="lazy">
+                    </div>
+                    <div class="device-body">
+                        <span class="device-year">1966</span>
+                        <h3>Le Smoking</h3>
+                        <span class="device-maker">Yves Saint Laurent</span>
+                        <p>The tuxedo redesigned for women. Sharp, sensual, and at the time, scandalous.</p>
+                    </div>
+                </div>
+
+                <div class="device-card reveal">
+                    <div class="device-image-wrap">
+                        <img src="../images/photos/fashion-1980s.jpg" alt="Power suit" loading="lazy">
+                    </div>
+                    <div class="device-body">
+                        <span class="device-year">1980</span>
+                        <h3>The Power Suit</h3>
+                        <span class="device-maker">Giorgio Armani</span>
+                        <p>Soft tailoring with broad shoulders. The uniform that took women from the secretarial pool to the boardroom.</p>
+                    </div>
+                </div>
+
+                <div class="device-card reveal">
+                    <div class="device-image-wrap">
+                        <img src="../images/photos/slip-dress-plaza.jpg" alt="Model wearing a Calvin Klein black slip dress" loading="lazy">
+                    </div>
+                    <div class="device-body">
+                        <span class="device-year">1994</span>
+                        <h3>The Slip Dress</h3>
+                        <span class="device-maker">Calvin Klein</span>
+                        <p>Bias-cut satin in a single sleek line. Underwear became evening wear, and minimalism took over the 90s.</p>
+                    </div>
+                </div>
+
+                <div class="device-card reveal">
+                    <div class="device-image-wrap">
+                        <img src="../images/photos/fashion-2010s.jpg" alt="Streetwear" loading="lazy">
+                    </div>
+                    <div class="device-body">
+                        <span class="device-year">2015</span>
+                        <h3>The Yeezy Sneaker</h3>
+                        <span class="device-maker">Kanye West &amp; Adidas</span>
+                        <p>A streetwear shoe that made luxury houses queue. The moment hype culture and high fashion fused.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section reveal">
+        <h2>Got a Question?</h2>
+        <p>Drop us a note - feedback, corrections, or a piece we missed.</p>
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon" aria-hidden="true"></span>
+                    <span>Fashion Through Time</span>
+                </div>
+                <p>An interactive digital fashion museum celebrating the evolution of style, designers, and craftsmanship from the 1950s to today.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="decades.html">Decades</a></li>
+                    <li><a href="artists.html">Designers</a></li>
+                    <li><a href="technology.html">Craft</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Form</a></li>
+                    <li><a href="mailto:ftt@gmail.com">Email Us</a></li>
+                    <li><a href="contact.html#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4 1 .5.4.8.8 1 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-1 1.4-.4.5-.8.8-1.4 1-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-1-.5-.4-.8-.8-1-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 1-1.4.4-.5.8-.8 1.4-1 .4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 1.8a3.2 3.2 0 1 1 0 6.4 3.2 3.2 0 0 1 0-6.4zm5.2-2.1a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
+                    <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-4.4 23.2c-.1-1-.2-2.4 0-3.5l1.5-6.3s-.4-.8-.4-1.9c0-1.8 1-3.1 2.3-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1.1 4.2-.3 1.3.6 2.3 1.9 2.3 2.3 0 4-2.4 4-5.9 0-3.1-2.2-5.3-5.4-5.3-3.7 0-5.8 2.8-5.8 5.6 0 1.1.4 2.3.9 2.9.1.1.1.2.1.3l-.4 1.4c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.8 2.7-7.2 7.9-7.2 4.1 0 7.4 3 7.4 6.9 0 4.1-2.6 7.5-6.2 7.5-1.2 0-2.4-.6-2.7-1.4l-.7 2.8c-.3 1-.9 2.3-1.4 3.1A12 12 0 1 0 12 0z"/></svg></a>
+                    <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fashion Through Time. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back-to-top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7 1.4 1.4L11 8.8V19h2V8.8l4.6 4.6L19 12z"/></svg>
+    </button>
+
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
