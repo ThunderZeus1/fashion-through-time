@@ -336,14 +336,20 @@ $(document).ready(function () {
         }
 
         var $submit = form.find('button[type=submit]');
+        var isNetlify = form.data('netlify') || (window.location.hostname.indexOf('netlify.app') !== -1);
         $submit.prop('disabled', true).addClass('is-loading');
 
         $.ajax({
             url: actionUrl,
             method: 'POST',
             data: form.serialize(),
-            dataType: 'json',
-            success: function (resp) {
+            dataType: isNetlify ? 'text' : 'json',
+            success: function (resp, textStatus, xhr) {
+                if (isNetlify) {
+                    // Netlify returns a 200/redirect; consider 200 as success
+                    showThanksModal();
+                    return;
+                }
                 if (resp && resp.success) {
                     showThanksModal();
                 } else if (resp && resp.errors) {
