@@ -348,6 +348,8 @@ $(document).ready(function () {
                 }
                 if (resp && resp.success) {
                     showThanksModal();
+                } else if (typeof resp === 'string' && resp.indexOf('success') !== -1) {
+                    showThanksModal();
                 } else if (resp && resp.errors) {
                     var txt = resp.errors.join(', ');
                     if (txt.toLowerCase().indexOf('name') !== -1) $('#nameGroup').addClass('has-error');

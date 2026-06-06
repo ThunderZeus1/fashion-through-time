@@ -4,7 +4,15 @@
 
 
 // only allow POST - if someone opens this in the browser, send them home
+$isAjax = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
+          strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    if ($isAjax) {
+        header('Content-Type: application/json');
+        http_response_code(405);
+        echo json_encode(['success' => false, 'error' => 'Method not allowed']);
+        exit;
+    }
     header('Location: ../pages/contact.html');
     exit;
 }
@@ -25,6 +33,12 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'Email looks invalid
 if (strlen($message) < 10) $errors[] = 'Message is too short';
 
 if (count($errors) > 0) {
+    if ($isAjax) {
+        header('Content-Type: application/json');
+        http_response_code(400);
+        echo json_encode(['success' => false, 'errors' => $errors, 'message' => implode(', ', $errors)]);
+        exit;
+    }
     $errText = urlencode(implode(', ', $errors));
     header('Location: ../pages/contact.html?status=error&reason=' . $errText);
     exit;
@@ -47,9 +61,15 @@ $entry .= "Subject: $safeSubject\n";
 $entry .= "Message:\n$safeMessage\n";
 $entry .= "==============================\n\n";
 
-$ok = @file_put_contents(__DIR__ . '/messages.txt', $entry, FILE_APPEND | LOCK_EX);
+$ok = file_put_contents(__DIR__ . '/messages.txt', $entry, FILE_APPEND | LOCK_EX);
 
 if ($ok === false) {
+    if ($isAjax) {
+        header('Content-Type: application/json');
+        http_response_code(500);
+        echo json_encode(['success' => false, 'error' => 'server', 'message' => 'Unable to save message.']);
+        exit;
+    }
     header('Location: ../pages/contact.html?status=error&reason=server');
     exit;
 }
@@ -63,6 +83,11 @@ mail($to, $safeSubject, $safeMessage, $header);
 */
 
 
-// ---- 6) all good - back to the page with success flag ----
+// ---- 6) all good - respond based on request type ----
+if ($isAjax) {
+    header('Content-Type: application/json');
+    echo json_encode(['success' => true]);
+    exit;
+}
 header('Location: ../pages/contact.html?status=success');
 exit;
