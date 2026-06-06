@@ -340,6 +340,10 @@ $(document).ready(function () {
             method: 'POST',
             data: form.serialize(),
             dataType: isNetlify ? 'text' : 'json',
+            crossDomain: true,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            },
             success: function (resp, textStatus, xhr) {
                 if (isNetlify) {
                     // Netlify returns a 200/redirect; consider 200 as success

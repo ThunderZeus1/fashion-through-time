@@ -9,10 +9,12 @@ $allowedOrigins = [
     'http://127.0.0.1:8000',
     'http://localhost:8000',
 ];
-if (!empty($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins, true)) {
-    header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (!empty($origin) && in_array($origin, $allowedOrigins, true)) {
+    header('Access-Control-Allow-Origin: ' . $origin);
     header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
     header('Access-Control-Allow-Headers: Content-Type, X-Requested-With');
+    header('Access-Control-Allow-Credentials: true');
 }
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
@@ -22,6 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 // only allow POST - if someone opens this in the browser, send them home
 $isAjax = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
           strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
+if (!$isAjax && !empty($origin) && in_array($origin, $allowedOrigins, true)) {
+    $isAjax = true;
+}
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     if ($isAjax) {
         header('Content-Type: application/json');
