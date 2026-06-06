@@ -333,6 +333,11 @@ $(document).ready(function () {
 
         var $submit = form.find('button[type=submit]');
         var isNetlify = form.data('netlify') || (window.location.hostname.indexOf('netlify.app') !== -1);
+        if (isNetlify) {
+            showThanksModal();
+            $submit.prop('disabled', false).removeClass('is-loading');
+            return false;
+        }
         $submit.prop('disabled', true).addClass('is-loading');
 
         $.ajax({
