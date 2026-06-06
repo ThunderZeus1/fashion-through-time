@@ -368,10 +368,15 @@ $(document).ready(function () {
             },
             error: function (xhr) {
                 var msg = 'Server error. Please try again later.';
-                try {
-                    var json = JSON.parse(xhr.responseText || '{}');
-                    if (json && json.message) msg = json.message;
-                } catch (e) {}
+                if (xhr.status === 0) {
+                    msg = 'Cannot reach the local PHP server. Start it with: php -S 127.0.0.1:8000';
+                } else {
+                    try {
+                        var json = JSON.parse(xhr.responseText || '{}');
+                        if (json && json.message) msg = json.message;
+                    } catch (e) {}
+                }
+                console.error('Contact form AJAX failed:', xhr);
                 alert(msg);
             },
             complete: function () {
