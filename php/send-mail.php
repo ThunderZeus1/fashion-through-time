@@ -2,6 +2,22 @@
 /* send-mail.php - handles the contact form.
    Validates, saves to messages.txt, redirects back to the page. */
 
+// allow cross-origin AJAX from local dev server for Live Server / PHP dev server setup
+$allowedOrigins = [
+    'http://127.0.0.1:5500',
+    'http://localhost:5500',
+    'http://127.0.0.1:8000',
+    'http://localhost:8000',
+];
+if (!empty($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins, true)) {
+    header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+    header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+    header('Access-Control-Allow-Headers: Content-Type, X-Requested-With');
+}
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
 
 // only allow POST - if someone opens this in the browser, send them home
 $isAjax = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
